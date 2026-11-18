@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Status & Reels Saver Pro</title>
+  <style>
+    :root {
+      --primary-color: #10B981;
+      --bg-color: #FAFAFA;
+      --surface-color: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --border-color: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--surface-color);
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.04);
+      padding: 40px;
+    }
+    @media (max-width: 640px) {
+      .container { padding: 24px 18px; border-radius: 14px; }
+    }
+    .header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-color);
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .meta {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+    p, ul {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .highlight-card {
+      background: rgba(16, 185, 129, 0.06);
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+    .highlight-card p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    .footer {
+      border-top: 1px solid var(--border-color);
+      margin-top: 36px;
+      padding-top: 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="badge">Official Policy</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <strong>Application:</strong> Status & Reels Saver Pro<br>
+      <strong>Package Name:</strong> com.tools.statusreelssaver<br>
+      <strong>Developer Entity:</strong> RAS Infotech<br>
+      <strong>Effective Date:</strong> November 18, 2026
+    </div>
+  </div>
+
+  <div class="highlight-card">
+    <p>🔒 <strong>Core Commitment:</strong> Status & Reels Saver Pro is an entirely on-device utility application. We do NOT collect, transmit, store, sell, or analyze your photos, videos, contacts, or messages. All status viewing, video slicing, and audio extraction happens 100% locally on your phone.</p>
+  </div>
+
+  <h2>1. Overview & Scope</h2>
+  <p>This Privacy Policy explains how RAS Infotech ("we", "our", or "us") manages information when you install and use <strong>Status & Reels Saver Pro</strong> (referred to as the "App"). We respect your fundamental right to privacy and have engineered our app using zero-personal-data architecture.</p>
+
+  <h2>2. Zero Personal Data Collection</h2>
+  <p>We do not collect any personal identifying information (PII). Specifically:</p>
+  <ul>
+    <li><strong>No Account Registration:</strong> You do not need to create an account, log in, or provide your name, phone number, or email to use any feature.</li>
+    <li><strong>No Cloud Media Storage:</strong> Any status photos or videos viewed, saved, or sliced remain entirely in your device's local storage and MediaStore. We have no servers capable of accessing your media.</li>
+    <li><strong>No Contact Harvesting:</strong> The Direct Chat feature allows you to message phone numbers via WhatsApp without saving them. Phone numbers entered in this tool are used solely to launch the official WhatsApp application intent and are never sent over the internet or saved to remote databases.</li>
+  </ul>
+
+  <h2>3. Android Permissions & Storage Access Framework (SAF)</h2>
+  <p>To deliver its core features while complying strictly with Google Play Store Scoped Storage policies on Android 11, 12, 13, 14, and 15, the App uses the following sanctioned APIs:</p>
+  <ul>
+    <li><strong>Storage Access Framework (ACTION_OPEN_DOCUMENT_TREE):</strong> The App asks you to select the specific WhatsApp or WhatsApp Business status directory. This permission gives the App access ONLY to the user-selected folder and does not give broad access to your entire storage drive. We strictly avoid high-risk permissions such as <code>MANAGE_EXTERNAL_STORAGE</code>.</li>
+    <li><strong>Android MediaStore (Scoped Gallery Storage):</strong> When you choose to save a photo, video, or audio clip to your phone, the App uses Android's standard <code>MediaStore.Images</code>, <code>MediaStore.Video</code>, and <code>MediaStore.Audio</code> APIs without requiring legacy storage runtime permissions on Android 10+.</li>
+    <li><strong>Package Visibility (&lt;queries&gt;):</strong> The App checks whether WhatsApp (<code>com.whatsapp</code>) or WhatsApp Business (<code>com.whatsapp.w4b</code>) is installed on your device to tailor its user interface. We do not use the broad <code>QUERY_ALL_PACKAGES</code> permission.</li>
+    <li><strong>Notification Permission (POST_NOTIFICATIONS):</strong> On Android 13+, the App requests permission to deliver offline daily streak and tool utility reminders. These notifications are scheduled locally on your device with zero cloud push servers.</li>
+  </ul>
+
+  <h2>4. Third-Party Advertising & Mediation</h2>
+  <p>To keep Status & Reels Saver Pro free for all users, the App may display non-intrusive advertisements served through third-party ad mediation SDKs (such as Unity LevelPlay / ironSource):</p>
+  <ul>
+    <li>These ad networks may collect anonymized, non-personally identifiable technical telemetry (such as device manufacturer, screen resolution, operating system version, and general network region) strictly for fraud prevention and ad delivery optimization.</li>
+    <li>You can reset or opt out of personalized ad tracking anytime via your Android system settings: <em>Settings → Google → Ads → Delete advertising ID</em>.</li>
+  </ul>
+
+  <h2>5. Children's Privacy (COPPA Compliance)</h2>
+  <p>Our App is not directed toward children under the age of 13. We do not knowingly collect personal information from children. If you believe that a child has provided personal information through our app, please contact us so we can take immediate corrective measures.</p>
+
+  <h2>6. User Rights (GDPR & CCPA)</h2>
+  <p>Under regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA), you have rights regarding your data. Because we do not store or collect personal data on any server, we have no personal data to delete, modify, or export. You maintain complete control over all data on your phone by clearing app cache or uninstalling the app.</p>
+
+  <h2>7. Policy Updates</h2>
+  <p>We may update this Privacy Policy from time to time to reflect store policy changes or feature enhancements. The updated version will always be published at this permanent HTTPS URL with an updated effective date.</p>
+
+  <h2>8. Contact Us</h2>
+  <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or the security of Status & Reels Saver Pro, please contact our privacy compliance team:</p>
+  <ul>
+    <li><strong>Entity:</strong> RAS Infotech</li>
+    <li><strong>Support Email:</strong> <a href="mailto:support@rasinfotech.in">support@rasinfotech.in</a></li>
+    <li><strong>Official Website:</strong> <a href="https://master-control-cdn.pages.dev">https://master-control-cdn.pages.dev</a></li>
+  </ul>
+
+  <div class="footer">
+    &copy; 2026 RAS Infotech. All rights reserved. Built with High-Velocity Micro-App Factory Base Template.
+  </div>
+</div>
+
+</body>
+</html>
