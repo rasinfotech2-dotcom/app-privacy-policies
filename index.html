@@ -50,52 +50,126 @@
       border-radius: 20px;
       margin-bottom: 12px;
     }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .meta {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+    p, ul {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .highlight-card {
+      background: rgba(16, 185, 129, 0.06);
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+    .highlight-card p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    .footer {
+      border-top: 1px solid var(--border-color);
+      margin-top: 36px;
+      padding-top: 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="badge">Official Policy</div>
     <h1>Universal Privacy Policy</h1>
     <div class="meta">
       <strong>Developer & Publisher:</strong> NDroidHub<br>
-      <strong>Scope:</strong> All NDroidHub Mobile Applications & Utilities<br>
+      <strong>Scope:</strong> NDroidHub Mobile Applications & Utilities<br>
+      <strong>Official Policy Portal:</strong> <a href="https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html">https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html</a><br>
       <strong>Effective Date:</strong> January 1, 2026 &bull; Version 1.0.0
     </div>
   </div>
 
-  <h2>1. Introduction & Core Philosophy</h2>
-  <p>This Universal Privacy Policy governs all mobile applications, utilities, and developer services published by <strong>NDroidHub</strong> ("we", "our", or "us"). We firmly believe that utility tools should never harvest personal data. All NDroidHub applications are architected under strict <strong>Zero-Personal-Data</strong> and <strong>On-Device Scoped Execution</strong> standards.</p>
+  <div class="highlight-card">
+    <p>🔒 <strong>Core Commitment:</strong> NDroidHub Mobile Applications are entirely on-device utility applications. We do NOT collect, transmit, store, sell, or analyze your photos, videos, contacts, or messages. All processing happens 100% locally on your device.</p>
+  </div>
+
+  <h2>1. Overview & Scope</h2>
+  <p>This Universal Privacy Policy governs all mobile applications, utilities, and digital tools published by <strong>NDroidHub</strong> ("we", "our", or "us"). We respect your fundamental right to privacy and have engineered our mobile applications using a strict <strong>Zero-Personal-Data</strong> and <strong>On-Device Scoped Execution</strong> architecture.</p>
 
   <h2>2. Zero Personal Data Collection</h2>
-  <p>Across all our applications, we <strong>DO NOT</strong> collect, store, sell, or transmit any personally identifiable information (PII). Specifically:</p>
+  <p>Across all our applications, we do not collect, store, transmit, or monetize any Personally Identifiable Information (PII). Specifically:</p>
   <ul>
-    <li>No user account registration or mandatory sign-ins.</li>
-    <li>No access to or harvesting of your phonebook, personal contacts, SMS messages, or call logs.</li>
-    <li>No real-time GPS tracking or geolocation harvesting.</li>
-    <li>No cloud uploading of your private photos, videos, audio notes, or media files.</li>
+    <li><strong>No Account Registration:</strong> You are never required to create an account, log in, or provide your name, phone number, or email address to use any feature.</li>
+    <li><strong>No Cloud Media Storage:</strong> Any media viewed, processed, sliced, or generated remains entirely in your device's local memory and storage. We operate zero cloud servers capable of receiving or storing your media.</li>
+    <li><strong>No Contact Harvesting:</strong> Utility features that initiate external intents (such as direct messaging) do so solely through official Android system intents without reading, storing, or transmitting your address book or phone contacts.</li>
   </ul>
 
-  <h2>3. Local Storage & Scoped File Access (SAF & MediaStore)</h2>
-  <p>Our utility applications (such as status savers, audio extractors, and video splitters) interact with your device's filesystem strictly to deliver the features you explicitly trigger:</p>
+  <h2>3. Android Permissions & Storage Access Framework (SAF)</h2>
+  <p>To deliver utility features while complying strictly with Google Play Scoped Storage policies on Android 11, 12, 13, 14, and 15+, this Application uses sanctioned APIs:</p>
   <ul>
-    <li><strong>Storage Access Framework (SAF):</strong> On Android 11 through Android 15+, our apps request folder-scoped user consent via the standard Android system picker. The app only accesses files in directories you explicitly grant.</li>
-    <li><strong>Zero Cloud Telemetry:</strong> All file processing (including status previewing, lossless audio extraction, video trimming, and quote generation) occurs entirely offline within device memory. Nothing is ever uploaded to external servers.</li>
+    <li><strong>Storage Access Framework (ACTION_OPEN_DOCUMENT_TREE):</strong> When folder selection is required, the Application requests user consent through Android's system directory picker. The Application accesses only the explicitly granted folder and never accesses broad storage. We strictly avoid high-risk permissions such as <code>MANAGE_EXTERNAL_STORAGE</code>.</li>
+    <li><strong>Android MediaStore (Scoped Gallery Storage):</strong> When saving media to your device, the Application uses standard Android <code>MediaStore.Images</code>, <code>MediaStore.Video</code>, and <code>MediaStore.Audio</code> APIs without requiring legacy storage runtime permissions on Android 10+.</li>
+    <li><strong>Package Visibility (&lt;queries&gt;):</strong> The Application checks whether supported messenger or social tools are installed on your device strictly to tailor user interface options. We do not use the broad <code>QUERY_ALL_PACKAGES</code> permission.</li>
+    <li><strong>Notification Permission (POST_NOTIFICATIONS):</strong> On Android 13+, the Application requests permission to deliver offline daily streak and utility reminders. These notifications are scheduled locally on your device with zero cloud push servers.</li>
   </ul>
 
-  <h2>4. Advertising & Mediation Transparency</h2>
-  <p>To keep our applications freely accessible worldwide across Google Play and over 19 alternative app stores, our apps may display advertisements managed by industry-leading mediation platforms (such as Unity LevelPlay / ironSource):</p>
+  <h2>4. Third-Party Advertising & Mediation Transparency</h2>
+  <p>To keep NDroidHub mobile applications freely accessible worldwide across Google Play and over 19 alternative app stores, applications may display non-intrusive advertisements managed by industry-standard mediation platforms (such as Unity LevelPlay / ironSource):</p>
   <ul>
-    <li>These platforms may collect anonymized, non-personal technical telemetry (e.g., device model, OS version, locale, screen density) strictly for fraud prevention and ad frequency control.</li>
-    <li>Users may opt out of personalized ads at any time through standard Android system settings: <em>Settings → Google → Ads → Delete advertising ID</em>.</li>
+    <li>These platforms may process anonymized, non-personal technical telemetry (such as device manufacturer, screen resolution, operating system version, and general network region) strictly for fraud prevention, ad capping, and delivery optimization.</li>
+    <li><strong>Store Review Safe Mode:</strong> When active, all ad monetization is silenced to guarantee an uninterrupted review experience.</li>
+    <li>You can reset or opt out of personalized ad tracking anytime via your Android system settings: <em>Settings → Google → Ads → Delete advertising ID</em>.</li>
   </ul>
 
   <h2>5. Children's Privacy (COPPA Compliance)</h2>
-  <p>Our applications are designed as general-audience utilities and do not target children under the age of 13. We do not knowingly collect information from children.</p>
+  <p>Our applications are designed as general-audience utilities and are not directed toward children under the age of 13. We do not knowingly collect personal information from children. If you believe a minor has interacted with the Application in a manner of concern, contact us immediately for prompt assistance.</p>
 
-  <h2>6. Global Regulatory Compliance (GDPR, CCPA & Global Store Policies)</h2>
-  <p>Under GDPR, CCPA, and store privacy mandates, users have fundamental data rights. Because our applications store zero user data on remote servers, no personal profile exists to delete or export. Clearing your app cache or uninstalling the app permanently purges all local state from your device.</p>
+  <h2>6. User Rights (GDPR & CCPA)</h2>
+  <p>Under international regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA), you have fundamental rights regarding your data. Because our applications store zero user data on remote servers, no remote personal profile exists to delete or export. You maintain complete control over all data on your phone by clearing app cache or uninstalling the Application.</p>
 
-  <h2>7. Contact & Publisher Details</h2>
-  <p>If you have any questions or privacy inquiries regarding any NDroidHub application, please reach out directly to our compliance officer:</p>
+  <h2>7. Policy Updates</h2>
+  <p>We may update this Privacy Policy from time to time to reflect platform policy enhancements or feature updates. Any updates will be reflected inside our In-App viewer and at our permanent HTTPS repository.</p>
+
+  <h2>8. Contact & Compliance Information</h2>
+  <p>If you have any questions, feedback, or compliance inquiries regarding this Privacy Policy or any NDroidHub application, please contact our privacy compliance team:</p>
   <ul>
-    <li><strong>Developer / Publisher:</strong> NDroidHub</li>
-    <li><strong>Support & Compliance Email:</strong> <a href="mailto:support@ndroidhub.com">support@ndroidhub.com</a></li>
-    <li><strong>Master Policy Portal:</strong> <a href="https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html">https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html</a></li>
+    <li><strong>Developer & Publisher:</strong> NDroidHub</li>
+    <li><strong>Compliance Email:</strong> <a href="mailto:support@ndroidhub.com">support@ndroidhub.com</a></li>
+    <li><strong>Official Policy Portal:</strong> <a href="https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html">https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html</a></li>
   </ul>
 
   <div class="footer">
