@@ -1,0 +1,22 @@
+# app-ads.txt for NDroidHub Mobile Applications
+# IAB Tech Lab Authorized Digital Sellers Compliance
+# Contact: ndroidhub@tuta.io
+
+# Unity LevelPlay (ironSource) Mediation
+ironsource.com, 149835, DIRECT, b9b456453775f284
+unity3d.com, 29acc9cc5, DIRECT, a983279c6b7593c2
+
+# Chartboost Exchange
+chartboost.com, 693a77, DIRECT, 888d2f7a9cf60a3b
+
+# Start.io (StartApp) Network
+startapp.com, 208399582, DIRECT, 471b40ec47648f88
+
+# InMobi Exchange
+inmobi.com, f38676a6, DIRECT, 847291a27e69f012
+
+# Pangle (ByteDance)
+pangleglobal.com, 839210, DIRECT, c3948572a1b9472e
+
+# Mintegral
+mintegral.com, 103948, DIRECT, 549320ae94b81923
