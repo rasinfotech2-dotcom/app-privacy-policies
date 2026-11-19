@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - NDroidHub Mobile Applications</title>
+  <title>Privacy Policy - Status & Reels Saver Pro (com.tools.statusreelssaver)</title>
   <style>
     :root {
       --primary-color: #10B981;
@@ -54,11 +54,19 @@
       font-size: 28px;
       font-weight: 800;
       color: var(--text-main);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .meta {
       font-size: 13.5px;
       color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .meta code {
+      background: #F1F5F9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12.5px;
+      color: #0F172A;
     }
     h2 {
       font-size: 19px;
@@ -113,67 +121,66 @@
 
 <div class="container">
   <div class="header">
-    <div class="badge">Official Policy</div>
-    <h1>Universal Privacy Policy</h1>
+    <div class="badge">Official Application Privacy Policy</div>
+    <h1>Privacy Policy for Status & Reels Saver Pro</h1>
     <div class="meta">
+      <strong>Application:</strong> Status & Reels Saver Pro<br>
+      <strong>Package Identifier:</strong> <code>com.tools.statusreelssaver</code><br>
       <strong>Developer & Publisher:</strong> NDroidHub<br>
-      <strong>Scope:</strong> NDroidHub Mobile Applications & Utilities<br>
-      <strong>Official Policy Portal:</strong> <a href="https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html">https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html</a><br>
+      <strong>Compliance Email:</strong> <a href="mailto:ndroidhub@tuta.io">ndroidhub@tuta.io</a><br>
       <strong>Effective Date:</strong> January 1, 2026 &bull; Version 1.0.0
     </div>
   </div>
 
   <div class="highlight-card">
-    <p>🔒 <strong>Core Commitment:</strong> NDroidHub Mobile Applications are entirely on-device utility applications. We do NOT collect, transmit, store, sell, or analyze your photos, videos, contacts, or messages. All processing happens 100% locally on your device.</p>
+    <p>🔒 <strong>Core Commitment:</strong> <strong>Status & Reels Saver Pro</strong> is engineered as a strict on-device utility application. We do NOT collect, transmit, store, sell, or analyze your personal information, photos, files, contacts, or messages. All processing happens 100% locally on your device.</p>
   </div>
 
   <h2>1. Overview & Scope</h2>
-  <p>This Universal Privacy Policy governs all mobile applications, utilities, and digital tools published by <strong>NDroidHub</strong> ("we", "our", or "us"). We respect your fundamental right to privacy and have engineered our mobile applications using a strict <strong>Zero-Personal-Data</strong> and <strong>On-Device Scoped Execution</strong> architecture.</p>
+  <p>This Privacy Policy specifically governs the mobile application <strong>Status & Reels Saver Pro</strong> (Package: <code>com.tools.statusreelssaver</code>), developed and published by <strong>NDroidHub</strong> ("we", "our", or "us"). We respect your privacy and adhere to international data protection standards by implementing a zero-personal-data, on-device execution architecture.</p>
 
   <h2>2. Zero Personal Data Collection</h2>
-  <p>Across all our applications, we do not collect, store, transmit, or monetize any Personally Identifiable Information (PII). Specifically:</p>
+  <p><strong>Status & Reels Saver Pro</strong> does not collect, store, transmit, or monetize any Personally Identifiable Information (PII):</p>
   <ul>
-    <li><strong>No Account Registration:</strong> You are never required to create an account, log in, or provide your name, phone number, or email address to use any feature.</li>
-    <li><strong>No Cloud Media Storage:</strong> Any media viewed, processed, sliced, or generated remains entirely in your device's local memory and storage. We operate zero cloud servers capable of receiving or storing your media.</li>
-    <li><strong>No Contact Harvesting:</strong> Utility features that initiate external intents (such as direct messaging) do so solely through official Android system intents without reading, storing, or transmitting your address book or phone contacts.</li>
+    <li><strong>No User Account:</strong> You are never required to register, create an account, or provide personal credentials to use this Application.</li>
+    <li><strong>No Cloud Data Storage:</strong> Any records, generated items, or user preferences remain strictly in your device's local memory or internal application sandbox. We operate zero cloud servers capable of receiving or storing your data.</li>
+    <li><strong>No Contact or Address Book Access:</strong> The Application never reads, harvests, or transmits your contacts or address book.</li>
   </ul>
 
-  <h2>3. Android Permissions & Storage Access Framework (SAF)</h2>
-  <p>To deliver utility features while complying strictly with Google Play Scoped Storage policies on Android 11, 12, 13, 14, and 15+, this Application uses sanctioned APIs:</p>
+  <h2>3. Android Permissions & Media Handling</h2>
+  <p>To enable offline media management, playback, and editing, <strong>Status & Reels Saver Pro</strong> requests strictly sanctioned Android APIs:</p>
   <ul>
-    <li><strong>Storage Access Framework (ACTION_OPEN_DOCUMENT_TREE):</strong> When folder selection is required, the Application requests user consent through Android's system directory picker. The Application accesses only the explicitly granted folder and never accesses broad storage. We strictly avoid high-risk permissions such as <code>MANAGE_EXTERNAL_STORAGE</code>.</li>
-    <li><strong>Android MediaStore (Scoped Gallery Storage):</strong> When saving media to your device, the Application uses standard Android <code>MediaStore.Images</code>, <code>MediaStore.Video</code>, and <code>MediaStore.Audio</code> APIs without requiring legacy storage runtime permissions on Android 10+.</li>
-    <li><strong>Package Visibility (&lt;queries&gt;):</strong> The Application checks whether supported messenger or social tools are installed on your device strictly to tailor user interface options. We do not use the broad <code>QUERY_ALL_PACKAGES</code> permission.</li>
-    <li><strong>Notification Permission (POST_NOTIFICATIONS):</strong> On Android 13+, the Application requests permission to deliver offline daily streak and utility reminders. These notifications are scheduled locally on your device with zero cloud push servers.</li>
+    <li><strong>Scoped Media Storage (MediaStore):</strong> On Android 10+, the Application saves user-processed images, videos, and audio clips directly to standard Android MediaStore directories (e.g. <code>Movies/</code>, <code>Pictures/</code>, <code>Download/</code>) without requiring legacy broad storage access permissions.</li>
+    <li><strong>Storage Access Framework (SAF):</strong> When the user chooses custom backup or source directories, the Application uses Android's system directory picker (<code>ACTION_OPEN_DOCUMENT_TREE</code>) accessing solely the folder explicitly granted by the user.</li>
+    <li><strong>Package Visibility (&lt;queries&gt;):</strong> The Application queries whether specific messenger or social client applications are installed on the device solely to present targeted sharing and launch options. The broad <code>QUERY_ALL_PACKAGES</code> permission is never requested.</li>
+    <li><strong>Notification Permission (POST_NOTIFICATIONS):</strong> On Android 13+, optional notification permission enables offline daily streak tracking and utility alerts. All notifications are scheduled 100% locally on the device.</li>
   </ul>
 
   <h2>4. Third-Party Advertising & Mediation Transparency</h2>
-  <p>To keep NDroidHub mobile applications freely accessible worldwide across Google Play and over 19 alternative app stores, applications may display non-intrusive advertisements managed by industry-standard mediation platforms (such as Unity LevelPlay / ironSource):</p>
+  <p>To keep <strong>Status & Reels Saver Pro</strong> freely available worldwide across Google Play and over 19 alternative app stores, the Application may display non-intrusive advertisements managed by industry-standard mediation platforms (such as Unity LevelPlay / ironSource, Chartboost, and Start.io):</p>
   <ul>
-    <li>These platforms may process anonymized, non-personal technical telemetry (such as device manufacturer, screen resolution, operating system version, and general network region) strictly for fraud prevention, ad capping, and delivery optimization.</li>
-    <li><strong>Store Review Safe Mode:</strong> When active, all ad monetization is silenced to guarantee an uninterrupted review experience.</li>
-    <li>You can reset or opt out of personalized ad tracking anytime via your Android system settings: <em>Settings → Google → Ads → Delete advertising ID</em>.</li>
+    <li>These ad networks may process anonymized, non-personal technical telemetry (e.g. device model, operating system version, and coarse network region) strictly for fraud prevention, frequency capping, and ad delivery optimization.</li>
+    <li><strong>Store Review Safe Mode:</strong> All ad networks and telemetry are silenced during store review evaluations.</li>
+    <li>You can reset or opt out of personalized advertising anytime via your Android device settings: <em>Settings → Google → Ads → Delete advertising ID</em>.</li>
   </ul>
 
   <h2>5. Children's Privacy (COPPA Compliance)</h2>
-  <p>Our applications are designed as general-audience utilities and are not directed toward children under the age of 13. We do not knowingly collect personal information from children. If you believe a minor has interacted with the Application in a manner of concern, contact us immediately for prompt assistance.</p>
+  <p><strong>Status & Reels Saver Pro</strong> is a general-audience utility and is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
 
   <h2>6. User Rights (GDPR & CCPA)</h2>
-  <p>Under international regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA), you have fundamental rights regarding your data. Because our applications store zero user data on remote servers, no remote personal profile exists to delete or export. You maintain complete control over all data on your phone by clearing app cache or uninstalling the Application.</p>
+  <p>Because <strong>Status & Reels Saver Pro</strong> collects and retains zero personal data on external servers, no remote personal profile exists to export or delete. You retain 100% control over your data locally by clearing the application's storage cache or uninstalling the Application.</p>
 
-  <h2>7. Policy Updates</h2>
-  <p>We may update this Privacy Policy from time to time to reflect platform policy enhancements or feature updates. Any updates will be reflected inside our In-App viewer and at our permanent HTTPS repository.</p>
-
-  <h2>8. Contact & Compliance Information</h2>
-  <p>If you have any questions, feedback, or compliance inquiries regarding this Privacy Policy or any NDroidHub application, please contact our privacy compliance team:</p>
+  <h2>7. Contact & Compliance Information</h2>
+  <p>If you have any questions, feedback, or compliance inquiries regarding <strong>Status & Reels Saver Pro</strong>, please contact our dedicated privacy compliance desk:</p>
   <ul>
-    <li><strong>Developer & Publisher:</strong> NDroidHub</li>
-    <li><strong>Compliance Email:</strong> <a href="mailto:support@ndroidhub.com">support@ndroidhub.com</a></li>
-    <li><strong>Official Policy Portal:</strong> <a href="https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html">https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html</a></li>
+    <li><strong>Application:</strong> Status & Reels Saver Pro (<code>com.tools.statusreelssaver</code>)</li>
+    <li><strong>Publisher:</strong> NDroidHub</li>
+    <li><strong>Compliance Email:</strong> <a href="mailto:ndroidhub@tuta.io">ndroidhub@tuta.io</a></li>
+    <li><strong>Universal Master Policy:</strong> <a href="https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html">https://rasinfotech2-dotcom.github.io/app-privacy-policies/index.html</a></li>
   </ul>
 
   <div class="footer">
-    &copy; 2026 NDroidHub. All rights reserved.
+    &copy; 2026 NDroidHub. All rights reserved. &bull; Status & Reels Saver Pro (com.tools.statusreelssaver)
   </div>
 </div>
 
